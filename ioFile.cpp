@@ -24,5 +24,10 @@ int main(){
         // menulis dan memasukkan nilai dari 'baris' ke dalam file
         outfile << baris << endl; 
     }
+    // setelah selesai file ditutup
+    outfile.close();
+
+    // membuat objek input file stream
+    ifstream infile;
     
 }
