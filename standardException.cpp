@@ -18,13 +18,10 @@ int main()
     catch (exception& e)
     {
         // penangkap menggunakan objek exception
-        
+        cout << e.what() << endl;
+        // akan dieksekusi karna array data hanya memiliki 3 elemen
     }
-
-    catch (...)
-    {
-        // jika selain integer maka blok ini akan dieksekusi
-        cout << "Default pengecualian dieksekusi" << endl;
-    }
+    cout << "Baris program yang terakhir" << endl;
+    // penanda 2: bahwa program berjalan tanpa berhenti meskipun terjadi kesalahan
     return 0;
 }
