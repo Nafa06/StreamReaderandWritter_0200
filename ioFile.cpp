@@ -3,8 +3,7 @@
 #include <string>
 using namespace std;
 
-int main()
-{
+int main(){
     string baris;
 
     // membuat objek output file stream
@@ -21,10 +20,9 @@ int main()
         // mendapatkan setiap karakter dalam satu  baris
         getline(cin, baris);
         // loop akan berhenti jika anda memasukkan karakter q
-        if (baris == "q")
-            break;
+        if (baris == "q") break;
         // menulis dan memasukkan nilai dari 'baris' ke dalam file
-        outfile << baris << endl;
+        outfile << baris << endl; 
     }
     // setelah selesai file ditutup
     outfile.close();
@@ -34,8 +32,7 @@ int main()
     // membuka file yang dituliskan
     infile.open("contohfile.txt");
 
-    cout << endl
-         << "> Membuka dan membaca file " << endl;
+    cout << endl << "> Membuka dan membaca file " << endl;
     // jika file ada, maka:
     if (infile.is_open())
     {
@@ -46,6 +43,9 @@ int main()
             cout << baris << '\n';
         }
         // menutup file
-        infile.close();
+        infile.close();   
     }
+    // jika tidak ditemukan file maka akan menampilkan ini
+    else cout << "Unable to open file";
+    return 0;
 }
